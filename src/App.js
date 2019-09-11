@@ -1,8 +1,10 @@
 import React from 'react';
 import './App.css';
 
+import anime from './assets/anime.jpg';
+
 function App() {
-  return <h1>Hello Rocketseat</h1>
+  return <img src={anime} alt="Anime" width="300" height="200"/>
 }
 
 export default App;
