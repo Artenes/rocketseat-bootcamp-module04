@@ -17,9 +17,20 @@ const output = {
  * Loader for js files.
  */
 const jsLoader = {
-  test: /\.js$/, // defines that we want only js files.
+  test: /\.js$/, // gets only .js files.
   exclude: /node_modules/, // ignores third-party libraries.
   use: { loader: 'babel-loader' } // use babel to translate files.
+};
+
+/**
+ * Loader for css files.
+ */
+const cssLoader = {
+  test: /\.css$/, // gets only .css files
+  use: [ 
+    {loader: 'style-loader'}, // puts css files in index.html
+    {loader: 'css-loader'} // allows imports inside css files and resolve references to urls
+   ]
 };
 
 /**
@@ -33,5 +44,5 @@ module.exports = {
   entry,
   output,
   devServer,
-  module: { rules: [ jsLoader ] }
+  module: { rules: [ jsLoader, cssLoader ] }
 };
