@@ -1,10 +1,12 @@
 # Tech's list
 
 <p align="center">
-  <img src="images/screenshot.png" alt="Tech list screenshot"/>
+  <a href="http://artenesbok.com/rocketseat-bootcamp-module04/">
+    <img src="images/screenshot.png" alt="Tech list screenshot"/>
+  </a>
 </p>
 
-[Rocketseat's GoStack bootcamp](https://rocketseat.com.br/bootcamp) introductory module to ReactJS.
+[Rocketseat's GoStack bootcamp](https://rocketseat.com.br/bootcamp) introductory module to ReactJS. [See it live here](http://artenesbok.com/rocketseat-bootcamp-module04/).
 
 # About
 
