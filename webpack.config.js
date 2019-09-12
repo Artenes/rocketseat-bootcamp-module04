@@ -9,7 +9,7 @@ const entry = path.resolve(__dirname, 'src', 'index.js');
  * Output configuration for generated bundle file.
  */
 const output = {
-  path: path.resolve(__dirname, 'public'), // path where generated file will be saved.
+  path: path.resolve(__dirname, 'docs'), // path where generated file will be saved.
   filename: 'bundle.js' // name of generated file.
 };
 
@@ -45,7 +45,7 @@ const imagesLoader = {
  * Dev server configuration for hot reload.
  */
 const devServer = {
-  contentBase: path.resolve(__dirname, 'public'), // path to where compiled files are.
+  contentBase: path.resolve(__dirname, 'docs'), // path to where compiled files are.
 };
 
 module.exports = {
