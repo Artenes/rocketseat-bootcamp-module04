@@ -11,7 +11,7 @@ class TechList extends Component {
   };
 
   /**
-   * Has to be an arrwo function to have access to class' `this` instance.
+   * Has to be an arrow function to have access to class' `this` instance.
    */
   handleInputChange = e => {
     this.setState({ newTech: e.target.value })
@@ -28,11 +28,20 @@ class TechList extends Component {
     });
   }
 
+  handleDelete = tech => {
+    this.setState({ techs: this.state.techs.filter(t => t !== tech) })
+  }
+
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
         <ul>
-          { this.state.techs.map(tech => <li key={tech}>{tech}</li>) }
+          { this.state.techs.map(tech => (
+            <li key={tech}>
+              {tech}
+              <button type="button" onClick={() => {this.handleDelete(tech)}}>Delete</button>
+            </li>
+          )) }
         </ul>
         <input 
           type="text" 
