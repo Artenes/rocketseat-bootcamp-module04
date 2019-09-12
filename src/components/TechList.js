@@ -39,6 +39,9 @@ class TechList extends Component {
     if (!this.state.newTech) {
       return;
     }
+    if (this.state.techs.find(tech => tech === this.state.newTech)) {
+      return;
+    }
     this.setState({ 
       techs: [ ...this.state.techs, this.state.newTech ],
       newTech: ''
